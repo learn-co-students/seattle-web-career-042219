@@ -11,7 +11,7 @@
 
 ### Ruby Fundamentals
  - [x] Understand what a "gem" is, and how to use them
- - [] Explain how missing keys lead to `undefined method ... for nil:NilClass`
+ - [x] Explain how missing keys lead to `undefined method ... for nil:NilClass`
 
 ### APIs
  - [x] Define Application Programming Interface (API)
