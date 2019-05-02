@@ -17,7 +17,6 @@
   
 # CRUD REVIEW
 - Create
-  SQL ->
   ```SQL
    CREATE TABLE books
    ```
@@ -35,17 +34,22 @@
     end
    ```
   - Read
-  - SQL ->
-  - SELECT * FROM books
-  - Ruby -> Tweet.all
+  ```SQL
+    SELECT * FROM books
+   ``` 
+   ```Ruby
+      Tweet.all
+   ```
   - Update
-    - SQL ->
-    - UPDATE
-    - ALTER
+    ```SQL
+      UPDATE
+      ALTER
+    ```  
   - Delete
-    - SQL ->
-    - DROP
-    - DELETE FROM books WHERE books.id == 5
+  ```SQL
+      DROP
+      DELETE FROM books WHERE books.id == 5
+  ```
 # Books/Author
   - books
   - author
