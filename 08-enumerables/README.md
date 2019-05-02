@@ -1,4 +1,4 @@
-# My Enumerables Lecture
+# Enumerables Lecture
 
 ## General tips.
 
