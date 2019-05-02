@@ -16,7 +16,7 @@
   - Columns -> Attribute
   
 # CRUD REVIEW
-- Create
+ - Create
   ```SQL
    CREATE TABLE books
    ```
@@ -33,19 +33,19 @@
     INSERT INTO books(title, author, num_pages) VALUEs(..,..,..)
     end
    ```
-  - Read
+ - Read
   ```SQL
     SELECT * FROM books
    ``` 
    ```Ruby
       Tweet.all
    ```
-  - Update
+ - Update
     ```SQL
       UPDATE
       ALTER
     ```  
-  - Delete
+ - Delete
   ```SQL
       DROP
       DELETE FROM books WHERE books.id == 5
