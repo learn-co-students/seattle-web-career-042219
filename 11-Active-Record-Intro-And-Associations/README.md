@@ -12,8 +12,8 @@
 - [x] alters Pikachu's hp to 59
 - [x] alters Magikarp's hp to 10
 ## Part 2
-- [ ] Let's add a trainer!
-- [ ] Define the model
+- [x] Let's add a trainer!
+- [x] Define the model
 
 
 ## References
