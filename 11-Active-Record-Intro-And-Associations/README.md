@@ -5,12 +5,12 @@
 
 
 ## Deliverables
-- [x]creates pokemon table
-- [x]is initialized with keyword arguments of id, name, type and hp
-- [x]saves an instance of a pokemon with the correct id
-- [x]finds a pokemon from the database by their id number and returns a new Pokemon object
-- [x]alters Pikachu's hp to 59
-- [x]alters Magikarp's hp to 10
+-[x]creates pokemon table
+-[x]is initialized with keyword arguments of id, name, type and hp
+-[x]saves an instance of a pokemon with the correct id
+-[x]finds a pokemon from the database by their id number and returns a new Pokemon object
+-[x]alters Pikachu's hp to 59
+-[x]alters Magikarp's hp to 10
 ## Part 2
 - [ ] Let's add a trainer!
 - [ ] Define the model
