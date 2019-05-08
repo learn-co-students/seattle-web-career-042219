@@ -119,7 +119,7 @@ puts palindrome2?("racecar")
 puts palindrome2?("racecars")
 ```
 
-## Method 3 with a loop
+# Method 3 with a loop
 
 ```
 def palindrome3?(string)
@@ -151,7 +151,7 @@ puts palindrome3?("racecar")
 puts palindrome3?("racecars")
 ```
 
-## Method 4 Two Indexes
+# Method 4 Two Indexes
 
 ```
 
