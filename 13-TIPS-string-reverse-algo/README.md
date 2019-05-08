@@ -33,7 +33,7 @@ Here are several sample solutions.
 
 # With if else statement
 
-````
+```
 def palindrome?(string)
   reversed_string = string.downcase.reverse
   if string.downcase == reversed_string
@@ -94,9 +94,7 @@ puts palindrome?("racecars")
 
 ```
 
-```
-
-## Method 2 With a Helper Method
+# Method 2 With a Helper Method
 
 ```
 def reverse_array(string)
@@ -124,8 +122,10 @@ puts palindrome2?('Noon')
 puts palindrome2?("racecar")
 puts palindrome2?("racecars")
 ```
+
 ```
-````
+
+```
 
 ## Method 3 with a loop
 
