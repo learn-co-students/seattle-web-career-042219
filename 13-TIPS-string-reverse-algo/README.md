@@ -1,4 +1,4 @@
-## TIPS Lecture
+# TIPS Lecture
 
 Technical Interview Practice for Students
 
@@ -17,7 +17,7 @@ In mathematics and computer science, an algorithm (/ˈælɡərɪðəm/ ( liste
 
 Algorithms are popular in technical interview whiteboarding portions.
 
-## Example - Palindrome Finder
+# Example - Palindrome Finder
 
 Here is an example of a palindrom finding algorithm.
 
