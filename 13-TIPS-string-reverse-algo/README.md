@@ -29,9 +29,9 @@ Other related issues and problems may be: data given as uppercase, data as an in
 
 Here are several sample solutions.
 
-## Method 1
+# Method 1
 
-# With if else statement
+## With if else statement
 
 ```
 def palindrome?(string)
@@ -43,7 +43,7 @@ def palindrome?(string)
 end
 ```
 
-# With ternary
+## With ternary
 
 ```
 def palindrome?(string)
@@ -52,7 +52,7 @@ def palindrome?(string)
 end
 ```
 
-# With text
+## With text
 
 ```
 def palindrome?(string)
@@ -61,7 +61,7 @@ def palindrome?(string)
 end
 ```
 
-# Easiest one line
+## Easiest one line
 
 ```
 def palindrome?(string)
@@ -70,7 +70,7 @@ end
 
 ```
 
-# Easiest, but more easily read in two lines
+## Easiest, but more easily read in two lines
 
 ```
 def palindrome?(string)
