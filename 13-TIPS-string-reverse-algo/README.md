@@ -103,15 +103,11 @@ def reverse_array(string)
     end
     reversed_string = reverse_array.join
 end
-```
 
-```
 def palindrome2?(string)
     reverse_array(string) == string ? true : false
 end
-```
 
-```
 puts palindrome2?('Anna')
 puts palindrome2?('Civic')
 puts palindrome2?('Kayak')
@@ -121,10 +117,6 @@ puts palindrome2?('Mom')
 puts palindrome2?('Noon')
 puts palindrome2?("racecar")
 puts palindrome2?("racecars")
-```
-
-```
-
 ```
 
 ## Method 3 with a loop
@@ -147,9 +139,7 @@ def palindrome3?(string)
     end
     is_palindrome
 end
-```
 
-```
 puts palindrome3?('Anna')
 puts palindrome3?('Civic')
 puts palindrome3?('Kayak')
@@ -179,18 +169,6 @@ def palindrome4?(string)
     true
 end
 
-puts palindrome4?('Anna')
-puts palindrome4?('Civic')
-puts palindrome4?('Kayak')
-puts palindrome4?('Level')
-puts palindrome4?('Madam')
-puts palindrome4?('Mom')
-puts palindrome4?('Noon')
-puts palindrome4?("racecar")
-puts palindrome4?("racecars")
-```
-
-```
 puts palindrome4?('Anna')
 puts palindrome4?('Civic')
 puts palindrome4?('Kayak')
