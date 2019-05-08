@@ -68,7 +68,6 @@ end
 def palindrome?(string)
   string.downcase == string.downcase.reverse
 end
-
 ```
 
 ## Easiest, but more easily read in two lines
@@ -78,11 +77,9 @@ def palindrome?(string)
   reversed_string = string.downcase.reverse
   string.downcase == reversed_string
 end
-
 ```
 
 ```
-
 puts palindrome?('Anna')
 puts palindrome?('Civic')
 puts palindrome?('Kayak')
@@ -92,7 +89,6 @@ puts palindrome?('Mom')
 puts palindrome?('Noon')
 puts palindrome?("racecar")
 puts palindrome?("racecars")
-
 ```
 
 # Method 2 With a Helper Method
@@ -155,7 +151,6 @@ puts palindrome3?("racecars")
 # Method 4 Two Indexes
 
 ```
-
 def palindrome4?(string)
     str=string.to_s.downcase
     i=0
