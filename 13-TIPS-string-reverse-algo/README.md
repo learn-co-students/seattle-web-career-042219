@@ -39,7 +39,8 @@ def palindrome?(string)
   if string.downcase == reversed_string
 	 true
   else
-	  false
+    false
+  end
 end
 ```
 
@@ -74,8 +75,8 @@ end
 
 ```
 def palindrome?(string)
-reversed_string = string.downcase.reverse
-string.downcase == reversed_string
+  reversed_string = string.downcase.reverse
+  string.downcase == reversed_string
 end
 
 ```
@@ -99,13 +100,13 @@ puts palindrome?("racecars")
 ```
 def reverse_array(string)
     reverse_array = (1..string.length).map do |num|
-        string[-num]
+        string[-num].downcase
     end
     reversed_string = reverse_array.join
 end
 
 def palindrome2?(string)
-    reverse_array(string) == string ? true : false
+    aeverse_array(string) == string.downcase ? true : false
 end
 
 puts palindrome2?('Anna')
@@ -123,9 +124,9 @@ puts palindrome2?("racecars")
 
 ```
 def palindrome3?(string)
-    array = string.split
+    array = string.downcase.split("")
     is_palindrome = true
-    index=0
+    index = 0
     loop do
         if index <= array.length
             if array[index] != array[(-index)-1]
