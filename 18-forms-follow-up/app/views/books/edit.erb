@@ -1,0 +1,18 @@
+<form action="/books/<%=@book.id %>" method="post">
+  <label for="author">Author</label>
+  <input type="text" name="author" value="<%= @book.author%>">
+  <label for="title">Title</label>
+  <input type="text" name="title" value="<%= @book.title%>">
+  <label for="snippet">Snippet</label>
+  <input type="text" name="snippet" value="<%= @book.snippet%>">
+  <input type="hidden" name="_method" value="patch">
+  <input type="submit" name="" value="Update">
+</form>
+
+<% #This piece of code for a form was added outside of lecture. %>
+<% #Added a button for delete when I want to delete a specific record. %>
+
+<form action="/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete">
+</form>
