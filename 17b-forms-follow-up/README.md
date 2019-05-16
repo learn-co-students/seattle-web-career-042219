@@ -16,7 +16,12 @@ This lecture was kind of a grab bag of topics that didn't quite get covered in t
     - We also modified controllers/books_controller.rb so that POST '/books' would expect a params hash with key `:author_id` instead of `:author`
 
 ### Bonus if we have time
- - [] Pig Latinizer
+ - [x] Pig Latinizer
+    - [Solution 1.](https://github.com/hoffm386/sinatra-mvc-lab-seattle-web-career-021819/blob/65aa6c2d5eb2770031feb52c083544986156d8c6/models/pig_latinizer.rb) while loop (move the first letter to the end until the first letter is a vowel...this is the solution I like to use with younger students) 
+    - [Solution 2.](https://github.com/vibraniumforge/sinatra-mvc-lab-seattle-web-career-042219/blob/master/models/piglatinizer.rb) manually checking all the letters to split the string (Greg's solution)
+    - [Solution 3.](https://github.com/hoffm386/sinatra-mvc-lab-seattle-web-career-021819/blob/af5566692742e7a2063929195f430bc3ccefea6d/models/pig_latinizer.rb) using regex to split the string (Erin's favorite solution)
+    - [Solution 4.](https://github.com/hoffm386/sinatra-mvc-lab-seattle-web-career-021819/blob/3f20518bd0a1cd4d21da690d24c2aac1173d7564/models/pig_latinizer.rb) using regex to capture parts of the string and reorder them in place (no loop involved)
+    - [Solution 5.](https://github.com/hoffm386/sinatra-mvc-lab-seattle-web-career-021819/blob/a932d268bbb97e187f93a204f5d43e2ef7a473bc/models/pig_latinizer.rb) using regex to split the string, and to capture parts of the string and reorder them (not actually a good solution, but it can be condensed into a single line)
 
 
 ## Resources
