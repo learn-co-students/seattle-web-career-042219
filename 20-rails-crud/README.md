@@ -3,19 +3,26 @@
 In this lecture, we start with the familiar Sinatra "books" app and convert it into a Rails app
 
 ## SWBATs
- - [] Use the Rails routing mechanism
- - [] Write and test full CRUD controller actions
- - [] Understand strong params and how to use them
- - [] Write erb (embedded Ruby) views with Rails helpers
+ - [x] Use the Rails routing mechanism
+ - [x] Write and test full CRUD controller actions
+ - [x] Understand strong params and how to use them
+ - [x] Write erb (embedded Ruby) views with Rails helpers
     - `form_for` vs. `form_tag`
 
 ### Additional SWBATs if we have time:
- - [] Understand how to test routes in the Rails console
+ - [x] Understand how to test routes in the Rails console
  - [] Understand how to use partials to DRY up view code
- - [] Understand how to use filters to DRY up controller code
+ - [x] Understand how to use filters to DRY up controller code
 
 ## Deliverables
- - [] Restful resource `Book` (attributes `author`, `title`, `snippet`) with full CRUD
+ - [x] Restful resource `Book` (attributes `author`, `title`, `snippet`) with full CRUD
+    - index --> done
+    - show -- > done
+    - new --> done
+    - create --> done
+    - edit --> done
+    - update --> done
+    - destroy --> done
 
 ## Resources
 1. [Rails guide for `form_for`](https://guides.rubyonrails.org/form_helpers.html#binding-a-form-to-an-object)

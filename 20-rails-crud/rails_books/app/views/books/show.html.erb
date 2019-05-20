@@ -1,0 +1,11 @@
+<h1><%= @book.title %></h1>
+
+<%= @book.author %><br>
+
+<p><%= @book.snippet %></p>
+
+<%= form_tag @book, method: "delete" do %>
+  <%= submit_tag "Delete book" %>
+<% end %>
+
+<%= link_to "Books Index", books_path %>
