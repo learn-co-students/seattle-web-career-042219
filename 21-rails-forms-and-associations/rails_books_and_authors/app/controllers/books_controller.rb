@@ -36,7 +36,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :author, :snippet)
+    params.require(:book).permit(:title, :author_id, :snippet)
     # you can just do params.require(:book).permit! to permit everything (unsafe)
   end
 

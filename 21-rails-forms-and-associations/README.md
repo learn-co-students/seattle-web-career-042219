@@ -3,10 +3,10 @@
 Today we are converting the "books" application to a "books and authors" application.  The Sinatra version from last week is also included in this repo for reference.
 
 ## SWBATs
- - [] Refresher: Add a new ActiveRecord model and associate it with an existing model
- - [] New concept: `dependent: :destroy`
- - [] Refresher: Display information about an associated model
- - [] Allow the user to make a new instance of an ActiveRecord model that belongs to another model, this time in Rails
+ - [x] Refresher: Add a new ActiveRecord model and associate it with an existing model
+ - [x] New concept: `dependent: :destroy`
+ - [x] Refresher: Display information about an associated model
+ - [x] Allow the user to make a new instance of an ActiveRecord model that belongs to another model, this time in Rails
     - Using the `collection_select` Rails form helper
 
 
@@ -24,9 +24,21 @@ Today we are converting the "books" application to a "books and authors" applica
 4. What view(s) do I need?
 
 ## Deliverables
- - [] **As a site visitor, I should be able to view a single author.  I should be able to see the author's name and count of books. (For the purpose of this project, an author has many books and a book belongs to one author.)**
- - [] **As a site visitor, I should be able to see a list of authors**
- - [] **As a site visitor, I should be able to create a new book and associate it with an existing author.**
+ - [x] **As a site visitor, I should be able to view a single author.  I should be able to see the author's name and count of books. (For the purpose of this project, an author has many books and a book belongs to one author.)**
+    - [x] models
+    - [x] routes (only `:show`)
+    - [x] controller action `AuthorsController#show`
+    - [x] view 'authors/show.html.erb'
+ - [x] **As a site visitor, I should be able to see a list of authors**
+    - models --> no
+    - [x] routes (`:index`)
+    - [x] controller action `AuthorsController#index`
+    - [x] view authors/index.html.erb
+ - [x] **As a site visitor, I should be able to create a new book and associate it with an existing author.**
+    - models --> no
+    - routes --> no (already had full CRUD for books)
+    - [x] controller action --> change the strong params
+    - [x] view --> added `collection_select`
 
 ## Resources
 1. [Using a Rails generator to make a migration](https://guides.rubyonrails.org/active_record_migrations.html#creating-a-migration)
@@ -36,3 +48,12 @@ Today we are converting the "books" application to a "books and authors" applica
 5. [API documentation for `form_for`](https://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-form_for)
 6. [API documentation for `collection_select`](https://api.rubyonrails.org/v5.2.3/classes/ActionView/Helpers/FormOptionsHelper.html#method-i-collection_select)
 7. [Rails guide for partials](https://guides.rubyonrails.org/layouts_and_rendering.html#using-partials)
+
+Old drop-down:
+```
+<select name="book[author_id]">
+  <% Author.all.each do |author| %>
+    <option value="<%= author.id %>"><%= author.name %></option>
+  <% end %>
+</select>
+```

@@ -2,8 +2,8 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 
-  <%= f.label :author %>
-  <%= f.text_field :author %>
+  <%= f.label :author_id %>
+  <%= f.collection_select :author_id, Author.all, :id, :name, prompt: :true %>
 
   <%= f.label :snippet %>
   <%= f.text_field :snippet %>

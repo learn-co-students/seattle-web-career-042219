@@ -5,14 +5,14 @@ module Adapter
     attr_reader :author
 
     def initialize(author_name)
-      @author = author_name
+      @author = Author.find_or_create_by(name: author_name)
     end
 
     def fetch_books
       books = JSON.parse(RestClient.get(author_url))
 
       books['items'].each do |item|
-        if item['volumeInfo']['authors'] && item['volumeInfo']['authors'].include?(author)
+        if item['volumeInfo']['authors'] && item['volumeInfo']['authors'].include?(author.name)
 
           book = ::Book.new
           book.author = author
@@ -27,7 +27,7 @@ module Adapter
     private
 
     def author_url(max_results = 20)
-      "#{BASE_URL}#{author_sanitizer(author)}&maxResults=#{max_results}"
+      "#{BASE_URL}#{author_sanitizer(author.name)}&maxResults=#{max_results}"
     end
 
     def author_sanitizer(author)
