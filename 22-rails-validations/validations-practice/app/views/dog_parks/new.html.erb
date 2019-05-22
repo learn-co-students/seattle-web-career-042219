@@ -1,0 +1,30 @@
+<!-- "ok way" code, surrounded by `if false` so it won't run -->
+<% if false %>
+  <% if @dog_park.invalid? %>
+    The values you entered were invalid: <br>
+    <%= @dog_park.errors.full_messages %>
+    <br>
+  <% end %>
+<% end %>
+
+<!-- "best way" code -->
+<% if flash[:errors] %>
+  The values you entered were invalid: <br>
+  <% flash[:errors].each do |error| %>
+    <%= error %><br>
+  <% end %>
+  <br>
+<% end %>
+
+<%= form_for @dog_park do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :square_ft, "Square Feet" %>
+  <%= f.text_field :square_ft %>
+  <br>
+  <%= f.label :off_leash %>
+  <%= f.check_box :off_leash %>
+  <br>
+  <%= f.submit %>
+<% end %>

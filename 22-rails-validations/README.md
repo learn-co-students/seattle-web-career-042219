@@ -1,17 +1,17 @@
 # Rails Forms and Validations
 
 ## SWBATs
- - [] Explain the purpose of validations
+ - [x] Explain the purpose of validations
     - Why do we need them?
     - Where are they triggered?
- - [] Understand the `valid?` method
+ - [x] Understand the `valid?` method
     - It's more complicated than just returning a boolean!
- - [] Describe techniques for validating different data types
+ - [x] Describe techniques for validating different data types
     - Caution: boolean and existence validator (`blank?` method)
 
 
 ### Additional SWBATs if we have time
- - [] Strategize for how to communicate validation failures to the user
+ - [x] Strategize for how to communicate validation failures to the user
     - The easiest way: fail silently
     - The ok way: render the new form from the create action
     - The best way: store the information in the `flash` hash
@@ -20,13 +20,13 @@
  - [] Understand how the `build` ActiveRecord operation works
 
 ## Deliverables
- - [] Build a resource with at least one string, integer, and boolean attribute
- - [] For that resource, build routes, controller actions, and views for:
+ - [x] Build a resource with at least one string, integer, and boolean attribute
+ - [x] For that resource, build routes, controller actions, and views for:
     - `index`
     - `show`
     - `new`
     - `create`
- - [] Add at least one validation for each attribute of the resource
+ - [x] Add at least one validation for each attribute of the resource
 
 ## Resources
 1. [Rails guide for validations](https://guides.rubyonrails.org/active_record_validations.html)

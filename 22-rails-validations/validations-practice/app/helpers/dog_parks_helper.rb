@@ -1,0 +1,2 @@
+module DogParksHelper
+end
