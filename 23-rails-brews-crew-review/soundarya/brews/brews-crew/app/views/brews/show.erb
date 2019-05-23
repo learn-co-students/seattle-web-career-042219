@@ -1,0 +1,15 @@
+<h2>Blend Name</h2>
+<%= @brew.blend_name %><br>
+<h2>Origin</h2>
+<%= @brew.origin %><br>
+<h2>Notes</h2>
+<%= @brew.notes %><br>
+<h2>Strength</h2>
+<%= @brew.strength %>
+
+<h2>Customer who have enjoyed this brew : </h2>
+  <ul>
+    <% @brew.purchases.each do |p| %>
+      <li><%= p.customer_name %></li>
+    <% end %>
+  </ul>

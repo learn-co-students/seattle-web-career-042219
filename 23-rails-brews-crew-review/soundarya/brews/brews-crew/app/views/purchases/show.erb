@@ -1,0 +1,5 @@
+<h2 style="color: blue">Customer Purchases</h2>
+<%= @purchase.customer_name %><br>
+<h2 style="color: green">Price</h2>
+<%= @purchase.price %><br>
+<%= link_to @purchase.brew.blend_name, @purchase.brew %>
