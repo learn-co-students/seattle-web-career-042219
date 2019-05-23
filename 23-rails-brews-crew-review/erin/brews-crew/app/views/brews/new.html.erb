@@ -1,0 +1,20 @@
+<h1>Brew#new</h1>
+<%= form_for @brew do |f| %>
+  <%= f.label :blend_name %><%= f.text_field :blend_name %><br>
+  <%= f.label :origin %><%= f.text_field :origin %><br>
+  <%= f.label :notes %><%= f.text_field :notes %><br>
+  <%= f.select(:strength, 1..5) %><br>
+
+<!-- <select name="brew[strength]" id="brew_strength"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option></select><br> -->
+
+  <%= f.submit %>
+<% end %>
+
+<%# t.string "blend_name"
+t.string "origin"
+t.string "notes"
+t.integer "strength" %>

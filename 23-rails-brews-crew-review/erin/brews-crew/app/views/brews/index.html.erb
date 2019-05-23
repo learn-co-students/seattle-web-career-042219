@@ -1,0 +1,8 @@
+<h1>Brews#index</h1>
+
+<% @brews.each do |brew| %>
+  <%= link_to(brew.blend_name, brew) %> <%= link_to("Delete", brew, {method: :delete})%><br>
+<% end %>
+
+<br>
+<%= link_to "View strongest brew(s)", strongest_view_path %>

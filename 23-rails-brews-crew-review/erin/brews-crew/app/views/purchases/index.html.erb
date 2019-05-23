@@ -1,0 +1,3 @@
+<% @purchases.each do |purchase| %>
+  <%= link_to("#{purchase.id}. #{purchase.customer_name}'s purchase", purchase) %><br>
+<% end %>

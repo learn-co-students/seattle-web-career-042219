@@ -1,0 +1,11 @@
+<%= form_for @purchase do |f| %>
+  <%= f.label :customer_name %><%= f.text_field :customer_name %><br>
+  <%= f.label :price %><%= f.text_field :price %><br>
+  <%= f.label :brew_id %><%= f.collection_select(:brew_id, Brew.all, :id, :blend_name) %><br>
+
+  <%= f.submit %>
+<% end %>
+
+<%# t.string "customer_name"
+t.float "price"
+t.integer "brew_id" %>
