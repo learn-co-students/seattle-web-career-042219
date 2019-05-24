@@ -1,0 +1,6 @@
+<h1>View all Brews</h1>
+
+<% @brews.each do |brew|%>
+    <%= link_to brew.blend_name, brew_path(brew) %> | 
+    <%= link_to "Delete" , brew, method: "delete", data: { confirm: "Are you sure?"} %><br>
+<% end %>

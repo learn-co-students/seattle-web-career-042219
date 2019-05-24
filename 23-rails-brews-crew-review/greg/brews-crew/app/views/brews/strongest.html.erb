@@ -1,0 +1,5 @@
+<h1>Strongest Brews</h1>
+
+<%@brews.each do |brew| %>
+    <%= link_to brew.blend_name, brew_path(brew) %>
+<% end%>
