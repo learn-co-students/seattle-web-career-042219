@@ -52,7 +52,7 @@
 - `git add git commit git push` to github
 - In terminal run `heroku create` this will provision a new heroku app for you.
 - In terminal run `git remote -v` to see new remote that was added.
- * You should see the following after funning the above command:
+ * You should see the following after running the above command:
     * heroku	`https://git.heroku.com/your-unique-app-name.git` (fetch)
     * heroku	`https://git.heroku.com/your-unique-app-name.git` (push)
     * origin	`https://github.com/your-github-username/your-github-repo-name.git` (fetch)
