@@ -2,7 +2,7 @@
 
 ## Getting Started
 - If you haven't already, create an account on [Heroku](https://heroku.com)
-- If you haven't already, install Heroku CLI [CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
+- If you haven't already, install Heroku [CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 - Check which version of Ruby you are using
   * A locally installed version of Ruby 2.2.0+, Rubygems, Bundler, and Rails 5+
   * Check Ruby version in your CLI `ruby -v`
