@@ -11,6 +11,7 @@
 
 ## Assumed before deploying
 - `rails new app_name --database=postgresql`
+    * Your app will not deploy to Heroku using SQLite; the above command will set your project up with PostgreSQL
 - `rails db:setup` makes our db for postgresql
 - `rails db:migrate`
 - nice to have 
