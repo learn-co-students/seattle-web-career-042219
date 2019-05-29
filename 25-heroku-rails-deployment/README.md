@@ -4,10 +4,10 @@
 - If you haven't already, create an account on [Heroku](https://heroku.com)
 - If you haven't already, install Heroku [CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 - Check which version of Ruby you are using
-  * A locally installed version of Ruby 2.2.0+, Rubygems, Bundler, and Rails 5+
-  * Check Ruby version in your CLI `ruby -v`
-  * Check Rails version in your CLI`rails -v`
-  * Helpful update links are at the bottom of this README
+  * A locally installed version of Ruby 2.2.0+, Rubygems, Bundler, and Rails 5+ is required for Heroku deployment
+    * Check Ruby version in your CLI `ruby -v`
+    * Check Rails version in your CLI`rails -v`
+    * Helpful update links are at the bottom of this README
 
 ## Assumed before deploying
 - `rails new app_name --database=postgresql`
