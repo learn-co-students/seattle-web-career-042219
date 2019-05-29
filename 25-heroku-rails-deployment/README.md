@@ -13,7 +13,11 @@
 - `rails new app_name --database=postgresql`
 - `rails db:setup` makes our db for postgresql
 - `rails db:migrate`
-- nice to have [Postico](https://eggerapps.at/postico/) [Postgresql GUI](https://postgresapp.com/downloads.html) for viewing your db
+- nice to have 
+    * [Postico](https://eggerapps.at/postico/) is a PostgreSQL Client for Mac
+    * [pgAdmin](https://www.pgadmin.org/download/) may be used on Linux, Unix, Mac OS X and Windows to manage PostgreSQL 9.2 and above.
+    * [Postgresql GUI](https://postgresapp.com/downloads.html) for viewing your db for Mac
+    * [Postgresql](https://www.postgresql.org/download/windows/) for Windows
 
 ## Deploying to Heroky Using a Unique App Name
 - After you have created your Heroku account/logged into your Heroku acccount
@@ -23,7 +27,7 @@
     * Name your App under `App name`; App name must start with lower-case
     * Click the `Create app` button
 - Run `heroku login` in your terminal.
-  * It will open a browser window and ask you to signin to your account if you dont have one make one.
+  * It will open a browser window and ask you to sign in to your account if you dont have one make one.
 - In your terminal run `ls -a` and make sure that you have a `.git` file if you do not run `git init` to initialize it.
 - Navigate to github and make a repo for your app
 - Copy the path to the github URL and run in terminal `git remote add origin "url_to_gh_app"`
