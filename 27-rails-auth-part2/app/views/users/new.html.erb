@@ -1,0 +1,21 @@
+<% if flash[:message] %>
+  <p>
+    <%= flash[:message] %>
+  </p>
+<% end %>
+
+<%= form_for @user, {class: 'ui form'} do |f| %>
+<%= f.label :username %>
+  <div class="field">
+    <%= f.text_field :username %>
+  </div>
+  <%= f.label :password %>
+  <div class="field">
+    <%= f.password_field :password %>
+  </div>
+  <%= f.label :password_confirmation %>
+  <div class="field">
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <%= f.submit 'Create User', {class: 'ui big pink button inverted'} %>
+<% end %>
