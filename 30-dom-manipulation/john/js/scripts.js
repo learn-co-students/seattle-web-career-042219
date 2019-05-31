@@ -1,6 +1,34 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // //BACK END FUNCTIONS
 
 // //random number 12 or less
+
+// //(1..12).to_a.sample
+
 // function generateNumber() {
 //     return Math.ceil(Math.random() * 12);
 // }
