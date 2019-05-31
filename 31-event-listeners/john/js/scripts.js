@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var newDiv = document.createElement("div");
     var newList = document.createElement("ul");
     newDiv.appendChild(newList);
-    setInterval(() => {
+    document.getElementById("cats-button").addEventListener('click', () => {
         for(var i=0;i<2;i++) {
             const numberOfCats = generateNumber();
             var thisItem = document.createElement("li");
@@ -34,17 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             newList.appendChild(thisItem);
         }
-    }, 400)
+    })
     document.querySelector(".container").appendChild(newDiv);
 
 
 //clear cat list
-    setInterval(() => {
+    document.getElementById("no-cats-button").addEventListener('click', () => {
         document.querySelectorAll("li.cat").forEach((x) => {
             x.parentElement.removeChild(x);
         })
-    },10000)
+    })
 
+//add food to list
+    document.getElementById("food-form").addEventListener('submit', (event) => {
+        event.preventDefault();
+        let newFood = document.createElement("li");
+        newFood.textContent = event.target[0].value;
+        document.getElementById("dinner").appendChild(newFood);
+        event.target[0].value = "";
+    })
     
 // add new colors
     document.body.style.backgroundColor = backgroundColor;

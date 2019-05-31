@@ -11,6 +11,11 @@
             <hr>
             <h2>Welcome to my site, I hope you enjoy your stay</h2>
             <p>The following is a list of tonight's dinner items.</p>
+            <form id="food-form">
+                <label for="food">Add a dinner item:</label>
+                <input type="text" id="food-input">
+                <button type="submit" name="food" class="btn btn-success">Add</button>
+            </form>
             <ul id="dinner">
                 <li>Smoked Salmon</li>
                 <li>Grilled Peppers</li>
@@ -18,6 +23,8 @@
                 <li>Wild Rice</li>
                 <li>Birthday Cake</li>
             </ul>
+            <button class="btn btn-success" id="cats-button">Add some cats</button>
+            <button class="btn btn-danger" id="no-cats-button">Remove all cats</button>
         </div>
     </body>
 </html>
