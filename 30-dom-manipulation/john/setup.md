@@ -185,3 +185,13 @@ Students will go to their favorite websites and modify the DOM programmatically.
 ### Conclusion/Wrap Up
 
 > You've now seen how we can create really interesting applications with just a few lines of JS code. We'll continue to build on these ideas over the course of the Module.
+
+### IWBCT
+
+Guess what things are
+Stop me with questions
+Some basic HTML review
+Show functions in JS vs Ruby
+no inline styling
+W3 schools vs MDN
+
