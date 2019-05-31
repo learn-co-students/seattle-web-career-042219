@@ -1,0 +1,12 @@
+img {
+    margin-top: 15px;
+    box-shadow: 0px 0px 15px teal;
+    border: 5px solid;
+    border-image:   linear-gradient(to bottom right, teal 25%, lightgreen 25%, lightgreen 50%,teal 50%, teal 75%, lightgreen 75%) 5;
+}
+
+.container {
+    height: 100%;
+    border-top: 15px solid;
+    border-image:   linear-gradient(to right, gray 25%, yellowgreen 25%, yellowgreen 50%,gray 50%, gray 75%, yellowgreen 75%) 5;
+}
