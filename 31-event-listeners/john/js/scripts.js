@@ -5,24 +5,12 @@ function generateNumber() {
     return Math.ceil(Math.random() * 12);
 }
 
-//random hex color
-function randomColor() {
-    return '#' + '0123456789abcdef'.split('').map(function (v, i, a) {
-        return i > 5 ? null : a[Math.floor(Math.random() * 16)]
-    }).join('');
-}
-
 const textColor = "lightgreen";
 const shadowColor = "#ccff00";
 const backgroundColor = "#010e04f0";
-// const textColor = randomColor();
-// const shadowColor = randomColor();
-// const backgroundColor = randomColor();
 
 // FRONT END CODE
 document.addEventListener("DOMContentLoaded", () => {
-
-    document.body.style.fontFamily = "comic sans ms";
 
 // update ids
     document.querySelectorAll("li").forEach((item) => {
@@ -46,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             newList.appendChild(thisItem);
         }
-    }, 200)
+    }, 400)
     document.querySelector(".container").appendChild(newDiv);
 
 
@@ -55,13 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll("li.cat").forEach((x) => {
             x.parentElement.removeChild(x);
         })
-    },3000)
+    },10000)
 
     
 // add new colors
     document.body.style.backgroundColor = backgroundColor;
     document.body.style.color = textColor;
-    // document.getElementById("salmon").style.color = "red";
     document.body.style.textShadow = `0px 3px 12px ${shadowColor}`;
     
 // add image
@@ -74,13 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // screen flicker
     setInterval(() => {
         document.querySelectorAll("li").forEach((item) => {
-            item.style.opacity = (generateNumber() + 8) / 12;
-            // var rect = item.getBoundingClientRect();
-            // console.log(rect.top, rect.right, rect.bottom, rect.left);            
-            // item.style.opacity = rect.top/window.innerHeight;
+            var rect = item.getBoundingClientRect();
+            item.style.opacity = rect.top/window.innerHeight;
         })
-        // document.getElementById("salmon").style.color === "blue" ? 
-        //     document.getElementById("salmon").style.color = "red" :
-        //     document.getElementById("salmon").style.color = "blue";
-    }, 80)
+    }, 10)
 });
