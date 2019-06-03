@@ -1,27 +1,50 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+     document.body.style.fontFamily = "comic sans ms";
+
+     document.querySelectorAll("li").forEach((item) => {
+        let shortName = item.textContent.split(" ");
+        shortName = "Boo!";
+        item.id = shortName;
+        console.log(item);
+     })
+
+     let newList = document.createElement("ul");
+     document.body.appendChild(newList);
+     newList.id = "kitties";
+     setInterval(()=> {
+         for (var i = 0; i < 3; i++) {
+             let newCat = document.createElement("li");
+             newCat.textContent = "Meow";
+             newCat.className = "mrWhiskers";
+             document.querySelector("#kitties").appendChild(newCat);
+        }
+     }, 1000)
+     
+     setInterval(() => {
+         let kittyItems = document.querySelectorAll(".mrWhiskers");
+         kittyItems.forEach((item) => {
+            item.parentNode.removeChild(item);
+         })
+     }, 5000)
+         
+    const catGif = document.createElement("img");
+    catGif.id = "picture";
+    catGif.src = "https://media3.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif?cid=790b76115cf02c073650366355eafb88&rid=giphy.gif";
+    catGif.style.cssFloat = "right"
+    document.querySelector("h1").appendChild(catGif)
+
+    // // add css
+    var myCss = document.createElement("link");
+    myCss.href = "./css/styles.css";
+    myCss.rel = "stylesheet";
+    myCss.type = 'text/css'; 
+    document.head.appendChild(myCss);
+
+})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//BELOW IS THE BASE CODE WE WORKED FROM (feel free to ignore for now)
 
 // //BACK END FUNCTIONS
 
