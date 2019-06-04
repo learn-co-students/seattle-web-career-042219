@@ -1,76 +1,201 @@
-//BACK END FUNCTIONS
+document.addEventListener('DOMContentLoaded', () => {
 
-//random number 12 or less
-function generateNumber() {
-    return Math.ceil(Math.random() * 12);
-}
+    //  document.body.style.fontFamily = "comic sans ms";
 
-const textColor = "lightgreen";
-const shadowColor = "#ccff00";
-const backgroundColor = "#010e04f0";
-
-// FRONT END CODE
-document.addEventListener("DOMContentLoaded", () => {
-
-// update ids
-    document.querySelectorAll("li").forEach((item) => {
+     document.querySelectorAll("li").forEach((item) => {
         let shortName = item.textContent.split(" ");
-        item.id = shortName[shortName.length-1].toLowerCase();
-    });
+        shortName = "Boo!";
+        item.id = shortName;
+        // console.log(item);
+     })
 
+     let newList = document.createElement("ul");
+    document.querySelector(".div1").appendChild(newList);
+    // document.querySelector(".div4").appendChild(newList);
+     newList.id = "kitties";
 
-//add cat list
-    var newDiv = document.createElement("div");
-    var newList = document.createElement("ul");
-    newDiv.appendChild(newList);
-    document.getElementById("cats-button").addEventListener('click', () => {
-        for(var i=0;i<2;i++) {
-            const numberOfCats = generateNumber();
-            var thisItem = document.createElement("li");
-            thisItem.className = "cat";
-            thisItem.innerText = `Here are ${numberOfCats} cats. Shall we dance? `;
-            for(var j=0;j<numberOfCats;j++) {
-                thisItem.innerText += " 🐈 ";
-            }
-            newList.appendChild(thisItem);
+    document.querySelector('#addCats').addEventListener('click', ()=> {
+         for (var i = 0; i < 3; i++) {
+             let newCat = document.createElement("li");
+             newCat.textContent = "Meow  🐈";
+             newCat.className = "mrWhiskers";
+             document.querySelector("#kitties").appendChild(newCat);
+            addMouseFuss(newCat);
         }
-    })
-    document.querySelector(".container").appendChild(newDiv);
+     })
+     
+    const clearButton = document.getElementById("clearCats");
 
-
-//clear cat list
-    document.getElementById("no-cats-button").addEventListener('click', () => {
-        document.querySelectorAll("li.cat").forEach((x) => {
-            x.parentElement.removeChild(x);
-        })
-    })
-
-//add food to list
-    document.getElementById("food-form").addEventListener('submit', (event) => {
-        event.preventDefault();
-        let newFood = document.createElement("li");
-        newFood.textContent = event.target[0].value;
-        document.getElementById("dinner").appendChild(newFood);
-        event.target[0].value = "";
-    })
-    
-// add new colors
-    document.body.style.backgroundColor = backgroundColor;
-    document.body.style.color = textColor;
-    document.body.style.textShadow = `0px 3px 12px ${shadowColor}`;
-    
-// add image
+     clearButton.addEventListener('click', () => {
+         let kittyItems = document.querySelectorAll(".mrWhiskers");
+         kittyItems.forEach((item) => {
+            item.parentNode.removeChild(item);
+         })
+     })
+         
     const catGif = document.createElement("img");
     catGif.id = "picture";
     catGif.src = "https://media3.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif?cid=790b76115cf02c073650366355eafb88&rid=giphy.gif";
     catGif.style.cssFloat = "right"
-    document.querySelector("h1").appendChild(catGif)
+    catGif.style.width = "100%";
+    document.querySelector(".div3").prepend(catGif)
 
-// screen flicker
+    // // add css
+    var myCss = document.createElement("link");
+    myCss.href = "./css/styles.css";
+    myCss.rel = "stylesheet";
+    myCss.type = 'text/css'; 
+    document.head.appendChild(myCss);
+
+    // screen flicker
     setInterval(() => {
         document.querySelectorAll("li").forEach((item) => {
+            // item.style.opacity = (generateNumber()) / 12;
             var rect = item.getBoundingClientRect();
-            item.style.opacity = rect.top/window.innerHeight;
+            item.style.opacity = ((window.innerHeight - rect.top)-50)/window.innerHeight;
         })
-    }, 10)
-});
+        // document.getElementById("salmon").style.color === "blue" ? 
+        //     document.getElementById("salmon").style.color = "red" :
+        //     document.getElementById("salmon").style.color = "blue";
+    }, 80)
+
+
+    const textColor = "lightgreen";
+    const shadowColor = "#ccff00";
+    const backgroundColor = "#010e04f0";
+
+
+    // add new colors
+    document.body.style.backgroundColor = "yellow";
+    document.body.style.color = textColor;
+    // document.getElementById("salmon").style.color = "red";
+    document.body.style.textShadow = `0px 3px 12px ${shadowColor}`;
+
+    function addToFoodList(food) {
+        const foodList = document.querySelector("#dinner");
+        let newFood = document.createElement("li");
+        newFood.textContent = food;
+        foodList.appendChild(newFood);
+    }
+
+    document.querySelector("#dinnerForm").addEventListener('submit', (event) => {
+        event.preventDefault();
+        let newFood = event.target[0].value;
+        addToFoodList(newFood);
+        event.target[0].value = "";
+    })
+
+    let allListItems = document.querySelectorAll("li");
+
+    allListItems.forEach((item) => {
+        addMouseFuss(item);
+    })
+    
+    function addMouseFuss(node) {
+        node.addEventListener('mouseover', () => {
+            console.log("get off my list item");
+            console.log("---");
+    })
+}
+
+})
+
+
+//BELOW IS THE BASE CODE WE WORKED FROM (feel free to ignore for now)
+
+// //BACK END FUNCTIONS
+
+// //random number 12 or less
+
+// //(1..12).to_a.sample
+
+function generateNumber() {
+    return Math.ceil(Math.random() * 12);
+}
+
+// //random hex color
+// function randomColor() {
+//     return '#' + '0123456789abcdef'.split('').map(function (v, i, a) {
+//         return i > 5 ? null : a[Math.floor(Math.random() * 16)]
+//     }).join('');
+// }
+
+// // const textColor = randomColor();
+// // const shadowColor = randomColor();
+// // const backgroundColor = randomColor();
+
+// // FRONT END CODE
+// document.addEventListener("DOMContentLoaded", () => {
+
+//     document.body.style.fontFamily = "comic sans ms";
+
+// // update ids
+//     document.querySelectorAll("li").forEach((item) => {
+//         let shortName = item.textContent.split(" ");
+//         item.id = shortName[shortName.length-1].toLowerCase();
+//     });
+
+
+// //add cat list
+//     var newDiv = document.createElement("div");
+//     var newList = document.createElement("ul");
+//     newDiv.appendChild(newList);
+//     setInterval(() => {
+//         for(var i=0;i<2;i++) {
+//             const numberOfCats = generateNumber();
+//             var thisItem = document.createElement("li");
+//             thisItem.className = "cat";
+//             thisItem.innerText = `Here are ${numberOfCats} cats. Shall we dance? `;
+//             for(var j=0;j<numberOfCats;j++) {
+//                 thisItem.innerText += " 🐈 ";
+//             }
+//             newList.appendChild(thisItem);
+//         }         
+//     }, 200)
+//     document.querySelector(".container").appendChild(newDiv);
+
+
+// //clear cat list
+//     setInterval(() => {
+//         document.querySelectorAll("li.cat").forEach((x) => {
+//             x.parentElement.removeChild(x);
+//         })
+//     },3000)
+
+
+
+
+// // add image
+//     const catGif = document.createElement("img");
+//     catGif.id = "picture";
+//     catGif.src = "https://media3.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif?cid=790b76115cf02c073650366355eafb88&rid=giphy.gif";
+//     catGif.style.cssFloat = "right"
+//     document.querySelector("h1").appendChild(catGif)
+
+// // screen flicker
+//     setInterval(() => {
+//         document.querySelectorAll("li").forEach((item) => {
+//             item.style.opacity = (generateNumber()) / 12;
+//             // var rect = item.getBoundingClientRect();
+//             // item.style.opacity = ((window.innerHeight - rect.top)*1.9)/window.innerHeight;
+//         })
+//         // document.getElementById("salmon").style.color === "blue" ? 
+//         //     document.getElementById("salmon").style.color = "red" :
+//         //     document.getElementById("salmon").style.color = "blue";
+//     }, 80)
+
+// // add css
+//     var myCss = document.createElement("link");
+//     myCss.href = "./css/styles.css";
+//     myCss.rel = "stylesheet";
+//     myCss.type = 'text/css'; 
+//     document.head.appendChild(myCss);
+
+//     setInterval(() => {
+//         document.querySelector(".container").style.boxShadow == "blue 0px -200px 134px" ?
+//             document.querySelector(".container").style.boxShadow = "red 0px -200px 134px" :
+//             document.querySelector(".container").style.boxShadow = "blue 0px -200px 134px";
+//         console.log(document.querySelector(".container").style.boxShadow);
+//     }, 350)
+
+// });

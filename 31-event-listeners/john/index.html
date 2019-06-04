@@ -1,30 +1,39 @@
 <html>
-    <head>
-        <title>my website</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="js/scripts.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <h1>My website</h1>
-            <hr>
-            <h2>Welcome to my site, I hope you enjoy your stay</h2>
-            <p>The following is a list of tonight's dinner items.</p>
-            <form id="food-form">
-                <label for="food">Add a dinner item:</label>
-                <input type="text" id="food-input">
-                <button type="submit" name="food" class="btn btn-success">Add</button>
-            </form>
-            <ul id="dinner">
-                <li>Smoked Salmon</li>
-                <li>Grilled Peppers</li>
-                <li>Steamed Asparagus</li>
-                <li>Wild Rice</li>
-                <li>Birthday Cake</li>
-            </ul>
-            <button class="btn btn-success" id="cats-button">Add some cats</button>
-            <button class="btn btn-danger" id="no-cats-button">Remove all cats</button>
-        </div>
-    </body>
+
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="./js/scripts.js"></script>          
+</head>
+
+<body>
+    <div class="div1">
+        <h3 id="addCats">Click here to hear a cat</h3>
+        <button id="clearCats" class="btn btn-warning">Woof</button>
+    </div>
+    <div class="div2">
+        <h1>My website</h1>
+    </div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="container div5">
+        <hr>
+        <h2>Welcome to my site, I hope you enjoy your stay</h2>
+        <form id="dinnerForm">
+            <label for='food'>Add a dinner item</label>
+            <input type="text" name='food'>
+            <button type="submit" id="submitFood" class="btn btn-warning">Submit</button>
+        </form>
+        <p>The following is a list of tonight's dinner items.</p>
+        <ul id="dinner">
+            <li>Smoked Salmon</li>
+            <li>Grilled Peppers</li>
+            <li>Steamed Asparagus</li>
+            <li>Wild Rice</li>
+            <li>Birthday Cake</li>
+        </ul>
+    </div>
+</body>
+
 </html>
