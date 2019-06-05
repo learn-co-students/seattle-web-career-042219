@@ -1,0 +1,16 @@
+<div id="clicker">
+  Clicks: <span id="clicks">0</span>
+</div>
+
+<script>
+  let totalClicks = 0
+  let clicker = document.getElementById('clicker')
+  clicker.addEventListener('click', () => {
+    setValue(totalClicks++)
+  })
+
+  function setValue(value) {
+    let clicks = document.getElementById('clicks')
+    clicks.textContent = value
+  }
+</script>
