@@ -1,0 +1,12 @@
+body {
+  background-color: goldenrod;
+}
+
+.number {
+  width: 600px;
+  background-color: white;
+  border: solid 1px black;
+  padding-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

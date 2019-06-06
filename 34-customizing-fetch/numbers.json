@@ -1,0 +1,29 @@
+{
+  "numbers": [
+    {
+      "id": 1,
+      "number": 2,
+      "reason": "it's just cool."
+    },
+    {
+      "id": 2,
+      "number": 11,
+      "reason": "two ones in a row"
+    },
+    {
+      "number": "99",
+      "reason": "99",
+      "id": 3
+    },
+    {
+      "number": "42",
+      "reason": "life universe everything",
+      "id": 4
+    },
+    {
+      "number": "1",
+      "reason": "one",
+      "id": 5
+    }
+  ]
+}

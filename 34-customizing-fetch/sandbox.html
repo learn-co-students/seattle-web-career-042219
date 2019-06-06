@@ -1,0 +1,19 @@
+<form id="form">
+  <input type="text" />
+  <input type="submit" />
+</form>
+
+<script>
+  let form = document.getElementById('form')
+  form.addEventListener('submit', ev => {
+    ev.preventDefault()
+
+    fetch('http://localhost:3000/numbers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({number: -1, reason: 'negative emotions'})
+    })
+  })
+</script>
