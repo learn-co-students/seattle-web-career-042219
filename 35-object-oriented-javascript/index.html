@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link href="style.css" rel="stylesheet">
+  <script src="main.js"></script>
+  <script src="park.js"></script>
+</head>
+<body>
+  <div>
+    <h2>Enter a New Park</h2>
+    <form id="new-park-form">
+      <label>
+        Park Name:
+        <input name="name" type="text" />
+      </label>
+
+      <label>
+        Image URL:
+        <input name="url" type="text" />
+      </label>
+
+      <input type="submit" />
+    </form>
+  </div>
+
+  <div id="loading">
+    Loading... <br />
+    <img src="https://media2.giphy.com/media/3o7bu8sRnYpTOG1p8k/giphy.gif?cid=790b76115cfa905a476a4c58417ad908&rid=giphy.gif" />
+  </div>
+
+  <div id="error" class="hidden">
+    Error: <span id="error-message"></span>
+    <img src="https://media0.giphy.com/media/Q61LJj43H48z1FIK4X/giphy.gif?cid=790b76115cfa91c778714f59633ddd00&rid=giphy.gif" />
+  </div>
+
+  <div id="parks"></div>
+</body>
+</html>
