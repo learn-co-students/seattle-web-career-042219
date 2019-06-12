@@ -1,6 +1,6 @@
 # - Bubble Sort Pseudo Code
 
-### - https://en.wikipedia.org/wiki/Bubble_sort
+### https://en.wikipedia.org/wiki/Bubble_sort
 
 Take an array.
 Make a counter if you want to.
@@ -16,9 +16,9 @@ Repeat the second loop again until its end.
 Increment the first loop again until one less than array length.
 Stop, return new sorted array.
 
-# - Selection Sort in Pseudo Code
+# Selection Sort in Pseudo Code
 
-### - https://en.wikipedia.org/wiki/Selection_sort
+### https://en.wikipedia.org/wiki/Selection_sort
 Take an array
 Maybe make a counter
 Make one loop that loops to the end of the array - 1. This loop looks for the index of the minimum value.
@@ -35,7 +35,7 @@ Increment i and start again.
 Finish the top loop.
 Return sorted array.
 
-#### - Bubble Sort
+#### Bubble Sort
 
 Ruby
 ```
@@ -125,7 +125,7 @@ console.log(bubbleSort(array.slice()));
 
 ```
 
-#### - Selection Sort
+#### Selection Sort
 
 Ruby
 
