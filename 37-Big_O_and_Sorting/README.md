@@ -1,4 +1,4 @@
-# - Bubble Sort Pseudo Code
+# Bubble Sort Pseudo Code
 
 ### https://en.wikipedia.org/wiki/Bubble_sort
 
