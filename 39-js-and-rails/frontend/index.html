@@ -1,0 +1,19 @@
+<script>
+  fetch('http://localhost:3000/api/v1/shows')
+  .then(res => res.json())
+  .then(shows => {
+    shows.forEach(show => {
+      let div = document.createElement('div')
+      let h3 = document.createElement('h3')
+      let p = document.createElement('p')
+
+      h3.textContent = show.title
+      p.textContent = show.content
+
+      div.appendChild(h3)
+      div.appendChild(p)
+      
+      document.body.appendChild(div)
+    })
+  })
+</script>
