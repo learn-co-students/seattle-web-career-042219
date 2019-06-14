@@ -1,7 +1,5 @@
 # README
 
-[Video](https://www.youtube.com/watch?v=PNBgQUfHkRg&feature=youtu.be)
-
 ## Objective
 
 * Perform full CRUD for 1 resource
