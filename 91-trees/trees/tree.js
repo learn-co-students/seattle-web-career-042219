@@ -26,20 +26,20 @@ div.children.push(p1);
 div.children.push(p2);
 
 /*
-Example: Printing out the tree as HTML
+Example: Printing out the tree as "HTML"
 <div>
-<p></p>
-<p></p>
+<p>
+</p>
+<p>
+</p>
 </div>
 */
 function processTree(node) {
-  // if (node) {
-    console.log(`<${node.data}>`);
-    for (const child of node.children) {
-      processTree(child);
-    }
-    console.log(`</${node.data}>`);
-  //}
+  console.log(`<${node.data}>`);
+  for (const child of node.children) {
+    processTree(child);
+  }
+  console.log(`</${node.data}>`);
 }
 
 const root = domTree.root;
