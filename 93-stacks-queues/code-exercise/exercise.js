@@ -50,6 +50,55 @@ validLinkedList(a)
 validLinkedList(f)
 => false
 */
-function validLinkedList(node) {
 
+// array of visited nodes implementation
+function validLinkedList1(node) {
+  const visitedNodes = [];
+  let currentNode = node;
+  while (currentNode) {
+    if (visitedNodes.includes(currentNode)) {
+      return false;
+    }
+    visitedNodes.push(currentNode);
+    currentNode = currentNode.next;
+  }
+  return true;
 }
+
+// marking visited nodes implementation
+function validLinkedList2(node) {
+  let currentNode = node;
+  while (currentNode) {
+    if (currentNode.visited) {
+      return false;
+    }
+    currentNode.visited = true;
+    currentNode = currentNode.next;
+  }
+  return true;
+}
+
+// Floyd's Algorithm
+function validLinkedList3(node) {
+  let slowNode = node;
+  let fastNode = node;
+
+  while (slowNode && fastNode && fastNode.next) {
+    slowNode = slowNode.next;
+    fastNode = fastNode.next.next;
+    if (slowNode === fastNode) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log("First implementation (array of visited nodes):");
+console.log(validLinkedList1(a));
+console.log(validLinkedList1(f));
+console.log("Second implementation (marking visited nodes):");
+console.log(validLinkedList2(a));
+console.log(validLinkedList2(f));
+console.log("Third implementation (Floyd's algorithm):");
+console.log(validLinkedList3(a));
+console.log(validLinkedList3(f));
